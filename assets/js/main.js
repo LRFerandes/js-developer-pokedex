@@ -30,8 +30,8 @@ function convertPokemonToLi(pokemon) {
             </div>
 
             <div class="modal"> 
-                <ol class="modal_list">
-                    <li>hp:${pokemon.stats[0]}</li>
+                <ol class="modal_list ${pokemon.type}">
+                    <li ">hp:${pokemon.stats[0]}</li>
                     <li>attack:${pokemon.stats[1]}</li>
                     <li>defense:${pokemon.stats[2]}</li>
                     <li>special-attack:${pokemon.stats[3]}</li>
