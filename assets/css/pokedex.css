@@ -78,7 +78,17 @@
     background-color: #f9aec7;
 }
 
+.stats{
+    display: none;
+    background-color: black;
+    height: 50px;
+}
+.stats:hover{
+    display: block;
+}
+
 .pokemon {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: .5rem;
@@ -122,6 +132,7 @@
     text-align: center;
 }
 
+
 .pokemon .detail img {
     max-width: 100%;
     height: 70px;
@@ -144,6 +155,29 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+
+
+.modal{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    display: none;
+    
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+}
+.modal_list{
+    font-size: 15px;
+    list-style-type: none;
+}
+
+.pokemon:hover .modal {
+    display: block;
 }
 
 @media screen and (min-width: 380px) {
