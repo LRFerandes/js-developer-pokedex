@@ -157,30 +157,6 @@
     border-radius: 1rem;
 }
 
-
-
-.modal{
-    background-color: white;
-    width: 200px;
-    height: 100px;
-    display: none;
-    
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-
-}
-.modal_list{
-    font-size: 15px;
-    list-style-type: none;
-    color: white;
-}
-
-.pokemon:hover .modal {
-    display: block;
-}
-
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;

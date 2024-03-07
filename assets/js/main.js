@@ -1,7 +1,10 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const button = document.getElementById('details_button')
+const detail = document.getElementById('button_detail')
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
 
 
@@ -28,18 +31,6 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-
-            <div class="modal"> 
-                <ol class="modal_list ${pokemon.type}">
-                    <li ">hp:${pokemon.stats[0]}</li>
-                    <li>attack:${pokemon.stats[1]}</li>
-                    <li>defense:${pokemon.stats[2]}</li>
-                    <li>special-attack:${pokemon.stats[3]}</li>
-                    <li>special-defense:${pokemon.stats[4]}</li>
-                    <li>speed:${pokemon.stats[5]}</li>
-                </ol>
-            </div>
-
         </li>
         
     `
@@ -70,6 +61,28 @@ loadMoreButton.addEventListener('click', () => {
 
 //mudanças feitas por mim
 
-button.addEventListener('click', function(){
-    console.alert('funcionou')
+detail.addEventListener('click', function (){
+    const input = document.getElementById('input')
+
+    // Abrir o modal quando o botão for clicado
+    modal.style.display = "block";
+
+    
+    pokeApi.getPokemomDetail(input.value)
+    
+    
+
+
 })
+
+// Fechar o modal quando o usuário clicar no botão 'x'
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+// Fechar o modal quando o usuário clicar fora do modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

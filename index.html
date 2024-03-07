@@ -20,11 +20,16 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+
+    <link rel="stylesheet" href="/assets/css/modal.css">
 </head>
 
 <body>
     <section class="content">
         <h1>Pokedex</h1>
+
+        <input type="text" placeholder="pokemon name" id="input">
+        <button type="submit" id="button_detail">detail</button>
 
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
@@ -35,12 +40,25 @@
                 Load More
             </button>
         </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Conteúdo do modal aqui...</p>
+            </div>
+          </div>
+
     </section>
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+
+    <script src="/assets/js/Pokemom-api.js"></script>
+    <script src="/assets/js/pokemom-main.js"></script>
+    <script src="/assets/js/PokemomCardName.js"></script>
+
 </body>
 
 </html>
