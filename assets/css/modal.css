@@ -10,11 +10,20 @@
   }
   
   .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* centralizar verticalmente e com margem */
+    background-color:#644B9B;
+    margin: 10% auto; /* centralizar verticalmente e com margem */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 65%;
+    height: 400px;
+
+    border-radius: 15px;
+  }
+
+  .modal-content-img{
+    background-color: black;
+    width: 350px;
+    height: 360px;
   }
   
   .close {

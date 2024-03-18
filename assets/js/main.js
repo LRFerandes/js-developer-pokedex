@@ -4,6 +4,7 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const detail = document.getElementById('button_detail')
 
 var modal = document.getElementById("myModal");
+var modalContent = document.getElementById("modal-content");
 var span = document.getElementsByClassName("close")[0];
 
 
@@ -43,6 +44,23 @@ function loadPokemonItens(offset, limit) {
     })
 }
 
+function convertPokemomToHtml(pokemonCard){
+    return `
+    <p> ${pokemonCard.name} </p>
+    
+     `
+}
+
+function detailPoke(pokemon){
+
+    pokeApi.getPokemomDetail(pokemon).then((pokemonCard) => {
+        const newHtml = convertPokemomToHtml(pokemonCard)
+        modalContent.innerHTML = newHtml
+        }
+    )
+        
+}
+
 loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
@@ -68,8 +86,7 @@ detail.addEventListener('click', function (){
     modal.style.display = "block";
 
     
-    pokeApi.getPokemomDetail(input.value)
-    
+   detailPoke(input.value)
     
 
 

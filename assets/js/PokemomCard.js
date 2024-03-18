@@ -1,4 +1,4 @@
-class PokemonDetail {
+class PokemomCard {
     name;
     weight;
     height;
