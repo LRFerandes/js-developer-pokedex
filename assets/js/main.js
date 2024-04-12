@@ -4,7 +4,7 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const detail = document.getElementById('button_detail')
 
 var modal = document.getElementById("myModal");
-var modalContent = document.getElementById("modal-content");
+var modalContent = document.getElementById("modal-content-text");
 var span = document.getElementsByClassName("close")[0];
 
 
@@ -46,7 +46,64 @@ function loadPokemonItens(offset, limit) {
 
 function convertPokemomToHtml(pokemonCard){
     return `
-    <p> ${pokemonCard.name} </p>
+    <div class="card_name">
+    
+        <p id="namePokemomCard" class="nameCard">  ${pokemonCard.name} </p>
+
+        <div class="card_name_body">
+
+            <p class="bodyStats"> wgt: 
+            <br>
+            ${pokemonCard.weight}
+            </p>
+
+            <p class="bodyStats"> hgt: 
+            <br>
+            ${pokemonCard.height}
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="card_stats">
+        <ul class="container">
+            <li class="column">
+                <p>HP: ${pokemonCard.stats[0]}</p>
+                <p>SAT:  ${pokemonCard.stats[1]}}</p>
+            </li>
+            <li class="column">
+                <p>ATT:  ${pokemonCard.stats[2]}</p>
+                <p>SDF:  ${pokemonCard.stats[3]}</p>
+            </li>
+            <li class="column">
+                <p>DEF:  ${pokemonCard.stats[4]}</p>
+                <p>SPD:  ${pokemonCard.stats[5]}</p>
+            </li>
+        </ul>
+    
+    </div>
+    <hr>
+    <div class="card_moves">
+        <div class="card_moves_moves">
+            <p>MOVES</p>
+            <p> ${pokemonCard.Moves[0]}</p>
+            <p> ${pokemonCard.Moves[1]}</p>
+            <p> ${pokemonCard.Moves[2]}</p>
+            <p> ${pokemonCard.Moves[3]}</p>
+            <p> ${pokemonCard.Moves[4]}</p>
+        </div>
+        <div>
+            <div class="card_moves_abilities">
+                <p>ABILITIES</p>
+                ${pokemonCard.ability.map((ability) => `<p>${ability}</p>`).join('')}
+            </div>
+            <div class="card_moves_type">
+                <p>TYPE</p>
+                ${pokemonCard.types.map((type) => `<p>${type}</p>`).join('')}
+            </div>
+        </div>
+    </div>
+    <hr>
+    
     
      `
 }
