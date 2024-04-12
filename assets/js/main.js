@@ -46,20 +46,26 @@ function loadPokemonItens(offset, limit) {
 
 function convertPokemomToHtml(pokemonCard){
     return `
+
+    <div id="modal-content-img" class="modal-content-img ${pokemonCard.types[0]}" style="background-image: url('${pokemonCard.photo}');">
+                    
+
+    </div>
+
     <div class="card_name">
     
-        <p id="namePokemomCard" class="nameCard">  ${pokemonCard.name} </p>
+        <p id="namePokemomCard" class="nameCard p_color">  ${pokemonCard.name} </p>
 
         <div class="card_name_body">
 
-            <p class="bodyStats"> wgt: 
+            <p class="bodyStats font_pixel  p_title">  wgt
             <br>
-            ${pokemonCard.weight}
+            <span class="p_color">${pokemonCard.weight} KG</span>
             </p>
 
-            <p class="bodyStats"> hgt: 
+            <p class="bodyStats font_pixel  p_title"> hgt:
             <br>
-            ${pokemonCard.height}
+            <span class="p_color">${pokemonCard.height} M</span>
             </p>
         </div>
     </div>
@@ -67,16 +73,16 @@ function convertPokemomToHtml(pokemonCard){
     <div class="card_stats">
         <ul class="container">
             <li class="column">
-                <p>HP: ${pokemonCard.stats[0]}</p>
-                <p>SAT:  ${pokemonCard.stats[1]}}</p>
+                <p class="font_pixel  p_title">HP: <sapn class="p_color">${pokemonCard.stats[0]}</sapn></p>
+                <p class="font_pixel  p_title">SAT: <span class="p_color"> ${pokemonCard.stats[1]}</span></p>
             </li>
             <li class="column">
-                <p>ATT:  ${pokemonCard.stats[2]}</p>
-                <p>SDF:  ${pokemonCard.stats[3]}</p>
+                <p class="font_pixel  p_title">ATT: <span class="p_color"> ${pokemonCard.stats[2]}</span></p>
+                <p class="font_pixel  p_title">SDF:  <span class="p_color">${pokemonCard.stats[3]}</span></p>
             </li>
             <li class="column">
-                <p>DEF:  ${pokemonCard.stats[4]}</p>
-                <p>SPD:  ${pokemonCard.stats[5]}</p>
+                <p class="font_pixel  p_title">DEF:  <span class="p_color">${pokemonCard.stats[4]}</span></p>
+                <p class="font_pixel  p_title">SPD: <span class="p_color"> ${pokemonCard.stats[5]}</span></p>
             </li>
         </ul>
     
@@ -84,26 +90,25 @@ function convertPokemomToHtml(pokemonCard){
     <hr>
     <div class="card_moves">
         <div class="card_moves_moves">
-            <p>MOVES</p>
-            <p> ${pokemonCard.Moves[0]}</p>
-            <p> ${pokemonCard.Moves[1]}</p>
-            <p> ${pokemonCard.Moves[2]}</p>
-            <p> ${pokemonCard.Moves[3]}</p>
-            <p> ${pokemonCard.Moves[4]}</p>
+            <p class="font_pixel p_data p_title">MOVES</p>
+            <p class="font_pixel p_data p_color"> ${pokemonCard.Moves[0]}</p>
+            <p class="font_pixel p_data p_color"> ${pokemonCard.Moves[1]}</p>
+            <p class="font_pixel p_data p_color"> ${pokemonCard.Moves[2]}</p>
+            <p class="font_pixel p_data p_color"> ${pokemonCard.Moves[3]}</p>
+            <p class="font_pixel p_data p_color"> ${pokemonCard.Moves[4]}</p>
         </div>
         <div>
             <div class="card_moves_abilities">
-                <p>ABILITIES</p>
-                ${pokemonCard.ability.map((ability) => `<p>${ability}</p>`).join('')}
+                <p class="font_pixel p_data p_title">ABILITIES</p>
+                ${pokemonCard.ability.map((ability) => `<p class="font_pixel p_data p_color">${ability}</p>`).join('')}
             </div>
             <div class="card_moves_type">
-                <p>TYPE</p>
-                ${pokemonCard.types.map((type) => `<p>${type}</p>`).join('')}
+                <p class="font_pixel p_data p_title">TYPE</p>
+                ${pokemonCard.types.map((type) => `<p class="font_pixel p_data p_color">${type}</p>`).join('')}
             </div>
         </div>
     </div>
     <hr>
-    
     
      `
 }

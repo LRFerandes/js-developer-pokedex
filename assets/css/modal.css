@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 *{
   margin: 0;
   padding: 0;
 }
+
+
 
 .modal {
     display: none; /* ocultar o modal por padrão */
@@ -32,10 +34,15 @@
     background-color: black;
     width: 350px;
     height: 360px;
+    border-radius: 5%;
+    background-size: cover;
+
+    position: absolute;
+    left: -85%;
   }
 
   .modal-content-text{
-    background-color: white;
+    background-color: transparent;
     position: absolute;
     width: 50%;
     height: 360px;
@@ -63,7 +70,6 @@
     display: flex;
     justify-content: space-between;
     margin: 10px;
-    background-color: lightblue;
   }
   .card_name > P{
     font-size: 1.5em;
@@ -79,9 +85,7 @@
   }
 
 
-.card_stats{
-  background-color: lightgray;
-}
+
 
 .container {
     display: flex;
@@ -108,15 +112,105 @@
 
 
 .card_moves_type{
-  background-color: lightcoral;
   width: 180px;
   height: 70px;
 }
 .card_moves_abilities{
-  background-color: lightgreen;
-  height: 70px;
+  height: 90px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.719);
 }
 .card_moves_moves{
-  background-color: lightpink;
   padding-right: 150px;
 }
+
+
+.font_pixel{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  
+}
+.p_data{
+  padding-top: 5px;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.p_color{
+  color: rgba(255, 251, 0, 0.815);
+}
+.p_title{
+  color: lightgray;
+}
+.normal {
+  background-color: #a6a877;
+}
+
+.grass {
+  background-color: #77c850;
+}
+
+.fire {
+  background-color: #ee7f30;
+}
+
+.water {
+  background-color: #678fee;
+}
+
+.electric {
+  background-color: #f7cf2e;
+}
+
+.ice {
+  background-color: #98d5d7;
+}
+
+.ground {
+  background-color: #dfbf69;
+}
+
+.flying {
+  background-color: #a98ff0;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.fighting {
+  background-color: #bf3029;
+}
+
+.psychic {
+  background-color: #f65687;
+}
+
+.dark {
+  background-color: #725847;
+}
+
+.rock {
+  background-color: #b8a137;
+}
+
+.bug {
+  background-color: #a8b720;
+}
+
+.ghost {
+  background-color: #6e5896;
+}
+
+.steel {
+  background-color: #b9b7cf;
+}
+
+.dragon {
+  background-color: #6f38f6;
+}
+
+.fairy {
+  background-color: #f9aec7;
+}
+
